@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+
 import { Footer, Navbar } from "../components";
 import { useSelector, useDispatch } from "react-redux";
 import { addCart, delCart } from "../redux/action";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const state = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
+  
 
   const EmptyCart = () => {
     return (
